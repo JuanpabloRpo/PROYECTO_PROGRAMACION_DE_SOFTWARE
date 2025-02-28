@@ -11,7 +11,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         static void Main(string[] args)
         {
             Console.WriteLine("Sistema de prestamos");
-            
+            Console.WriteLine("Prueba");
+            Console.WriteLine();
         }
     }
 }
