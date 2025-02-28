@@ -1,10 +1,8 @@
 # Tareas del Proyecto
 
 ## 🚀 Pendientes
-- [ ] Implementar autenticación de usuarios (Asignado a: @Oscar)
-- [ ] Crear la API de reservas (Asignado a: @Juan)
-- [ ] Diseñar la interfaz de usuario (Por asignar)
 
 ## ✅ Completadas
-- [x] Configuración inicial del repositorio
-- [x] Estructura de carpetas
+- [x] Configuración inicial del repositorio (Asignado a: @Juan)
+- [x] Crear archivo de tareas (Asignado a: @Oscar)
+- [x] Migrar al uso de issues y proyects (Asignado a: @Oscar)
