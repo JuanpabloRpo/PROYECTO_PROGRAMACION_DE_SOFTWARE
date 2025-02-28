@@ -13,6 +13,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("Sistema de prestamos");
             Console.WriteLine("Prueba");
             Console.WriteLine("Prueba 2");
+            Console.WriteLine("Prueba 3");
         }
     }
 }
