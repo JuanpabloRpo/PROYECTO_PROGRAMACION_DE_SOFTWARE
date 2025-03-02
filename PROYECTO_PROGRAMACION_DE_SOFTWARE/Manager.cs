@@ -18,15 +18,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             throw new NotImplementedException();
         }
 
-        public override void UpdateData(Dictionary<string, object> NewData)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override string ViewProfile()
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public void DeleteUser(string id) { }
         public void ModifyUser(string id, Dictionary<string, object> data) { }

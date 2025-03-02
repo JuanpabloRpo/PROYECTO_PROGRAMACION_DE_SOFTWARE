@@ -47,10 +47,10 @@
     <Compile Include="IAuthentication.cs" />
     <Compile Include="ILoanManagement.cs" />
     <Compile Include="IMaterialManagement.cs" />
+    <Compile Include="LogIn.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="MaterialStatus.cs" />
-    <Compile Include="NormalUser.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

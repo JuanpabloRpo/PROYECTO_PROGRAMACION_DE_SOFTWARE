@@ -7,28 +7,33 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal abstract class User: Person
+    internal class User: Person
     {
         private string email;
         private string userName;
         private string password;
-        private bool arrears;
+        private int arrears;
+        private TypeUser typeUser;
 
-        protected User()
+        public User()
         {
         }
 
-        protected User(int id, string name, string apellidoPaterno, string apellidoMaterno, int edad, bool activo, string email, string userName, string password, bool arrears) : base(id, name, apellidoPaterno, apellidoMaterno, edad, activo)
+        public User(int id, string name, string apellidoPaterno, string apellidoMaterno, int edad, string email, string userName, string password, int arrears, TypeUser typeUser) : base(id, name, apellidoPaterno, apellidoMaterno, edad)
 
         {
             this.email = email;
             this.userName = userName; 
-            this.password = password;
-            this.arrears = arrears;
+            this.Password = password;
+            this.Arrears = arrears;
+            this.typeUser = typeUser;   
 
         }
 
-        public abstract string ViewProfile();
-        public abstract void UpdateData(Dictionary<string, object> NewData);
+        public string Email { get => email; set => email = value; }
+        public string UserName { get => userName; set => userName = value; }
+        public string Password { get => password; set => password = value; }
+        public int Arrears { get => arrears; set => arrears = value; }
+        internal TypeUser TypeUser { get => typeUser; set => typeUser = value; }
     }
 }
