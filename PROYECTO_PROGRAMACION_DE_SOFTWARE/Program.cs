@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
@@ -10,10 +7,47 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Sistema de prestamos");
-            Console.WriteLine("Prueba");
-            Console.WriteLine("Prueba 2");
-            Console.WriteLine("Prueba 3");
+            
+            Validaciones validar = new Validaciones();
+            bool flagMenu = true;
+            while (flagMenu)
+            {
+                Console.WriteLine("Digite 1 para iniciar sesion\n" +
+                    "Digite 2 para registrarse\n" +
+                    "Digite 3 para salir");
+                int opcion = int.Parse(validar.eleccionAValidar(1,Console.ReadLine()));
+                switch (opcion)
+                {
+                    case 1:
+                        Console.WriteLine("Digite su nombre de usuario:");
+                        string UserName = validar.eleccionAValidar(3, Console.ReadLine());
+                        Console.WriteLine("Digite su contraseña: ");
+                        string PassWord = Console.ReadLine();
+
+                        if (DataBase.Search(UserName,PassWord))
+                        {
+                            Console.WriteLine("Bienvenido");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Debes registrarte");
+                        }
+                        break;
+                    case 2:
+
+                        Console.WriteLine("caso 2");
+                        break;
+                    case 3:
+                        flagMenu = false;
+                        break;
+                    default:
+                        Console.WriteLine("Opcion invalida");
+                        break;
+                }
+
+            }
+            
+
         }
     }
 }
