@@ -89,7 +89,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             SqlCommand comando = new SqlCommand(consulta, connection);
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
-            {
+            { 
                 if (lector["email"].ToString().Equals(email))
                 {
                     connection.Close();

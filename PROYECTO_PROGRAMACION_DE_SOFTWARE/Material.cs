@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal abstract class Material
+    internal abstract class Material: IMaterialManagement
     {
         public Material()
         {

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class Manager : User, IAuthentication
+    internal class Manager 
     {
         public bool Login(string userName, string password)
         {

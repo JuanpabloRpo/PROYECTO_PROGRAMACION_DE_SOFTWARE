@@ -8,9 +8,13 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal interface IMaterialManagement
     {
-        void RegisterMaterial(Material material);
-        void ChangeMaterial(string id, Dictionary<string, object> datos);
-        void RemoveMaterial(string id);
-        List<Material> MaterialSearch(string titulo);
+        string Id { get; set; }
+        string Title { get; set; }
+        string Author { get; set; }
+        int YearPublication { get; set; }
+        string Category { get; set; }
+        MaterialStatus Status { get; set; }
+
+        
     }
 }

@@ -43,9 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AudioVisual.cs" />
+    <Compile Include="Book.cs" />
     <Compile Include="DataBase.cs" />
-    <Compile Include="IAuthentication.cs" />
-    <Compile Include="ILoanManagement.cs" />
     <Compile Include="IMaterialManagement.cs" />
     <Compile Include="LogIn.cs" />
     <Compile Include="Manager.cs" />

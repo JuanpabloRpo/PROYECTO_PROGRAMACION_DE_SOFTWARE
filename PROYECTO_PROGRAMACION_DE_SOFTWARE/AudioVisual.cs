@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal interface IAuthentication
+    internal class AudioVisual
     {
-        bool Login(string userName, string password);
-        void Logout();
     }
 }
