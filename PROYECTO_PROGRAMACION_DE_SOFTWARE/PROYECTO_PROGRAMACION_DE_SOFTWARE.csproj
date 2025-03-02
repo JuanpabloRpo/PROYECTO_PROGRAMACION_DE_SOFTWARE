@@ -43,13 +43,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Docente.cs" />
-    <Compile Include="Empleado.cs" />
-    <Compile Include="Estudiante.cs" />
+    <Compile Include="DataBase.cs" />
+    <Compile Include="IAuthentication.cs" />
+    <Compile Include="ILoanManagement.cs" />
+    <Compile Include="IMaterialManagement.cs" />
+    <Compile Include="Manager.cs" />
     <Compile Include="Material.cs" />
-    <Compile Include="Persona.cs" />
+    <Compile Include="MaterialStatus.cs" />
+    <Compile Include="NormalUser.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SignUp.cs" />
+    <Compile Include="TypeUser.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

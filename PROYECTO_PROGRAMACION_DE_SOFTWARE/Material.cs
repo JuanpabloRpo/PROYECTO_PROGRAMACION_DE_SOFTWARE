@@ -6,41 +6,29 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class Material
+    internal abstract class Material
     {
-        private string _tipoMaterial; //bibliotecario o audiovisual
-        private string _autor; 
-        private string _editorial;
-        private string _codigo;
-        private string _ubicacion; // ubicacion en la biblioteca
-        private string _titulo;
-        private string _disponible;
-        private string _estado; // estado en el cual se encuentra el material
-
         public Material()
         {
         }
 
-        public Material(string tipoMaterial, string autor, string editorial, string codigo, string ubicacion, string titulo, string disponible, string estado)
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public int YearPublication { get; set; }
+        public string Category { get; set; }
+        public MaterialStatus Status { get; set; }
+
+        public Material(string id, string title, string author, int yearPublication, string category, MaterialStatus status)
         {
-            _tipoMaterial = tipoMaterial; 
-            _autor = autor;
-            _editorial = editorial;
-            _codigo = codigo;
-            _ubicacion = ubicacion;
-            _titulo = titulo;
-            _disponible = disponible;
-            _estado = estado;
-            
+            Id = id;
+            Title = title;
+            Author = author;
+            YearPublication = yearPublication;
+            Category = category;
+            Status = status;
         }
 
-        public string TipoMaterial { get => _tipoMaterial; set => _tipoMaterial = value; }
-        public string Autor { get => _autor; set => _autor = value; }
-        public string Editorial { get => _editorial; set => _editorial = value; }
-        public string Codigo { get => _codigo; set => _codigo = value; }
-        public string Ubicacion { get => _ubicacion; set => _ubicacion = value; }
-        public string Titulo { get => _titulo; set => _titulo = value; }
-        public string Disponible { get => _disponible; set => _disponible = value; }
-        public string Estado { get => _estado; set => _estado = value; }
+
     }
 }
