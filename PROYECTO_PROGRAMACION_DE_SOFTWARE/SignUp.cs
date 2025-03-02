@@ -23,12 +23,31 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         flag = false;
                         break;
                     case 2:
-                        typeuser = TypeUser.TEACHER;
-                        flag = false;
+                        
+                        Console.WriteLine("Digite el codigo de verificacion de maestro: ");
+                        if (Console.ReadLine().Equals("159357"))
+                        {
+                            typeuser = TypeUser.TEACHER;
+                            flag = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Codigo incorrecto");
+                        }
+                        
                         break;
                     case 3:
-                        typeuser = TypeUser.EMPLOYEE;
-                        flag = false;
+                        
+                        Console.WriteLine("Digite el codigo de verificacion de empleado: ");
+                        if (Console.ReadLine().Equals("159357"))
+                        {
+                            typeuser = TypeUser.EMPLOYEE;
+                            flag = false;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Codigo incorrecto");
+                        }
                         break;
                     default:
                         Console.WriteLine("Opcion invalida");
