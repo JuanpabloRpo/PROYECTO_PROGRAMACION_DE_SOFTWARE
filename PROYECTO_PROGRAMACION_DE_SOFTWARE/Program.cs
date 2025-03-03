@@ -19,10 +19,17 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
-                        
-                        if (LogIn.NewLogIn())
+                        User user = LogIn.NewLogIn();
+                        if (user!=null)
                         {
-                            Console.WriteLine("Bienvenido");
+                            if (user.TypeUser != TypeUser.LIBRARIAN)
+                            {
+                                UserOptions userOptions = new UserOptions();
+                            }
+                            else
+                            {
+                                Manager manager = new Manager();
+                            }
                         }
                         else
                         {

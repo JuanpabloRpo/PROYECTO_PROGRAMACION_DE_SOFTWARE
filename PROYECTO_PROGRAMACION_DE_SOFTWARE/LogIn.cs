@@ -19,12 +19,12 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             if (DataBase.Search(UserName, PassWord))
             {
-                return true;
+                return DataBase.getUserDataBase(UserName);
 
             }
             else
             {
-                return false;
+                return null;
             }
         }
     }

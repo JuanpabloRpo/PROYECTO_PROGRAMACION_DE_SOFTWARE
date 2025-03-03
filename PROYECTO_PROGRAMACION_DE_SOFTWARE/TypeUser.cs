@@ -11,5 +11,6 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         ESTUDENT,
         TEACHER,
         EMPLOYEE,
+        LIBRARIAN
     }
 }

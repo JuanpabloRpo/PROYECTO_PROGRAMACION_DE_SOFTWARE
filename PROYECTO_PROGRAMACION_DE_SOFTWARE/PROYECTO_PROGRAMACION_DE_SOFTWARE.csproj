@@ -59,6 +59,7 @@
     <Compile Include="SignUp.cs" />
     <Compile Include="TypeUser.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UserOptions.cs" />
     <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>
