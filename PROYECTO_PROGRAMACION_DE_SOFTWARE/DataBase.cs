@@ -82,7 +82,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             return false;
         }
 
-        public static bool Search(string email, int none)
+        public static bool SearchEmail(string email)
         {
             connection.Open();
             string consulta = "select email from NormalUser";

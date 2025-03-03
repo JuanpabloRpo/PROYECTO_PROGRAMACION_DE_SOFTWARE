@@ -9,7 +9,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class LogIn
     {
-        public static bool NewLogIn()
+        public static User NewLogIn()
         {
             Validaciones validar = new Validaciones();
             Console.WriteLine("Digite su nombre de usuario:");

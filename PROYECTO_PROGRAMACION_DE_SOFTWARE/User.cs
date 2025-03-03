@@ -35,5 +35,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public string Password { get => password; set => password = value; }
         public int Arrears { get => arrears; set => arrears = value; }
         internal TypeUser TypeUser { get => typeUser; set => typeUser = value; }
+
+
     }
 }

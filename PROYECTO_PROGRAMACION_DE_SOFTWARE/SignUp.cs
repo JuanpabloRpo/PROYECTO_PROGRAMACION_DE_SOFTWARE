@@ -78,7 +78,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             Console.WriteLine("Ingrese su email: ");
             string email = Console.ReadLine();
-            while (DataBase.Search(email,1))
+            while (DataBase.SearchEmail(email))
             {
                 Console.WriteLine("El email ya se encuentra en la base de datos digite un email diferente");
                 email = Console.ReadLine();
