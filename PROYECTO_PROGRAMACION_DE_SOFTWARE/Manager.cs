@@ -8,14 +8,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class Manager 
     {
-        public bool Login(string userName, string password)
+        public Manager() 
         {
-            throw new NotImplementedException();
-        }
-
-        public void Logout()
-        {
-            throw new NotImplementedException();
+            Console.WriteLine("Bienvenido bibliotecario");
         }
 
         
