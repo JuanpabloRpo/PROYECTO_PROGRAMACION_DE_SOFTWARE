@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class UserOptions
+    internal class UserMenu
     {
-        public UserOptions() 
+        public UserMenu() 
         {
             Validaciones validar = new Validaciones(); 
             Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");

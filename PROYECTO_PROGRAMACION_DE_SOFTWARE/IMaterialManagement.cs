@@ -10,9 +10,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         public IMaterialManagement()
         {
-            Console.WriteLine("Bienvenido bibliotecario");
+            Console.WriteLine("Bienvenido");
+            void CreateMaterial(Material material);
+            void ModifyMaterial(string id, Dictionary<string, object> data);
+            void DeleteMaterial(string id);
         }
-
-        
     }
 }
