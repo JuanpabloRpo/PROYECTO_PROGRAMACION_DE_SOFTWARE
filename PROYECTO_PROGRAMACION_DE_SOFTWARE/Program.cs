@@ -24,11 +24,15 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         {
                             if (user.TypeUser != TypeUser.LIBRARIAN)
                             {
-                                UserOptions userOptions = new UserOptions();
+                                LibrarianMenu LibrarianMenu = new LibrarianMenu();
+                            }
+                            else if (user.TypeUser == TypeUser.ADMINISTRATOR)
+                            {
+                                AdministratorMenu AdministratorMenu = new AdministratorMenu();
                             }
                             else
                             {
-                                Manager manager = new Manager();
+                                UserMenu UserMenu = new UserMenu();
                             }
                         }
                         else

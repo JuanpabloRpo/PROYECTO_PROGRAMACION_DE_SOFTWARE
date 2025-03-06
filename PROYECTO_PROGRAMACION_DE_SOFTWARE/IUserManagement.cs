@@ -6,13 +6,17 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class IMaterialManagement
+    internal class IUserManagement 
     {
-        public IMaterialManagement()
+        public IUserManagement() 
         {
             Console.WriteLine("Bienvenido bibliotecario");
         }
 
         
+
+        public void DeleteUser(string id) { }
+        public void ModifyUser(string id, Dictionary<string, object> data) { }
+
     }
 }
