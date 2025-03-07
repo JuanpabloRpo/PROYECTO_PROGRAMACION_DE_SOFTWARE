@@ -12,7 +12,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         {
             Validaciones validar = new Validaciones(); 
             Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
-            Console.WriteLine("Digite 1 para consultar el material disponible:\n" +
+            Console.WriteLine(
+                "Digite 1 para consultar el material disponible:\n" +
                 "Digite 2 para Reservar material\n" +
                 "Digite 3 para ver el estado de algun prestamo\n" +
                 "Digite 4 para renovar un prestamo\n");

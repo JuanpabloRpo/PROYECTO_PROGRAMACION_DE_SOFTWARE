@@ -22,11 +22,11 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         User user = LogIn.NewLogIn();
                         if (user!=null)
                         {
-                            if (user.TypeUser != TypeUser.LIBRARIAN)
+                            if (user.TypeUser != TypeUser.Librarian)
                             {
                                 LibrarianMenu LibrarianMenu = new LibrarianMenu();
                             }
-                            else if (user.TypeUser == TypeUser.ADMINISTRATOR)
+                            else if (user.TypeUser == TypeUser.Administrator)
                             {
                                 AdministratorMenu AdministratorMenu = new AdministratorMenu();
                             }
