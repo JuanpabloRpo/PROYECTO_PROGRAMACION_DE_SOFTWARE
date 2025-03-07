@@ -13,9 +13,21 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         private string Author { get; set; }
         private int YearPublication { get; set; }
         private MaterialStatus Status { get; set; }
-        private string Category { get; set; }
+        private MaterialCondition condition { get; set; }
+        private MaterialType Mtype { get; set; }
 
-        public Material(string id, string title, string author, int yearPublication, MaterialStatus status)
+        public Material(string id, string title, string author, int yearPublication, MaterialStatus status, MaterialCondition condition , MaterialType materialType)
+        {
+            Id = id;
+            Title = title;
+            Author = author;
+            YearPublication = yearPublication;
+            Status = status;
+            condition = new MaterialCondition();
+            materialType = new MaterialType();
+        }
+
+        protected Material(string id, string title, string author, int yearPublication, MaterialStatus status)
         {
             Id = id;
             Title = title;

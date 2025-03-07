@@ -10,7 +10,6 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         Available,
         Reserved, 
-        Loaned,
-        Damaged
+        Loaned
     }
 }

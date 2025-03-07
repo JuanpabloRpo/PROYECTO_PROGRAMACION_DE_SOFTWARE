@@ -19,6 +19,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
+                        AdministratorMenu administratorMenu = new AdministratorMenu();
+                        administratorMenu.ShowMenu();
+                        /*
                         User user = LogIn.NewLogIn();
                         if (user!=null)
                         {
@@ -42,6 +45,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         {
                             Console.WriteLine("Debes registrarte");
                         }
+                        */
                         break;
 
                     case 2:

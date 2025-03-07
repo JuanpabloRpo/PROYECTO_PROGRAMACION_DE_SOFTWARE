@@ -21,15 +21,16 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             while (flagMenu)
             {
-                int option = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bienvenido al gestor de usuarios.");
                 Console.WriteLine(
                     "Digite 1 para buscar un usuario\n" +
                     "Digite 2 para crear un usuario\n" +
                     "Digite 3 para actualizar los datos de un usuario\n" +
                     "Digite 4 para eliminar un usuario\n" +
-                    "Digite 5 para salir");
+                    "Digite 5 para regresar al menu anterior\n" +
+                    "Digite 6 para salir");
 
+                int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
                     case 1:
@@ -45,7 +46,12 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         userMethods.DeleteUser();
                         break;
                     case 5:
+                        Console.WriteLine("regresando al menu anterior...");
                         flagMenu = false;
+                        break;
+                    case 6:
+                        Console.WriteLine("Saliendo del sistema...");
+                        Environment.Exit(0);
                         break;
                     default:
                         Console.WriteLine("Invalid option");

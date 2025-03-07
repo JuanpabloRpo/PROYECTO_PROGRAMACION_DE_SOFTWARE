@@ -10,17 +10,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         public void SearchUser()
         {
-            Console.WriteLine("Ingrese el ID del usuario a buscar:");
-            int id = int.Parse(Console.ReadLine());
-            User user = DataBase.Search(id);
-            if (user == null)
-            {
-                Console.WriteLine("Usuario no encontrado.");
-                return;
-            }
-            Console.WriteLine("ID: " + user.Id);
-            Console.WriteLine("Email: " + user.Email);
-            Console.WriteLine("Nombre de usuario: " + user.UserName);
+            Console.WriteLine("Buscando usuario...");
         }
         public void CreateUser()
         {
@@ -30,38 +20,12 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
         public void UpdateUser()
         {
-            Console.WriteLine("Ingrese el ID del usuario a actualizar:");
-            int id = int.Parse(Console.ReadLine());
-                
-            User user = DataBase.Update(id);
-            if (user == null)
-            {
-                Console.WriteLine("Usuario no encontrado.");
-                return;
-            }
-
-            Console.WriteLine("Ingrese el nuevo email:");
-            user.Email = Console.ReadLine();
-
-            Console.WriteLine("Ingrese el nuevo nombre de usuario:");
-            user.UserName = Console.ReadLine();
-
-            Console.WriteLine("Datos actualizados correctamente.");
+            Console.WriteLine("Actualizando usuario...");
         }
 
         public void DeleteUser()
         {
-            Console.WriteLine("Ingrese el ID del usuario a eliminar:");
-            int id = int.Parse(Console.ReadLine());
-
-            if (DataBase.Delet(id))
-            {
-                Console.WriteLine("Usuario eliminado correctamente.");
-            }
-            else
-            {
-                Console.WriteLine("No se encontró el usuario.");
-            }
+            Console.WriteLine("Eliminando usuario...");
         }
     }
 }

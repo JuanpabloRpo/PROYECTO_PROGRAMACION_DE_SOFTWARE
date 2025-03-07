@@ -15,31 +15,40 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             bool flagMenu = true;
             while (flagMenu)
             {
-                int opcion = int.Parse(Console.ReadLine());
-                Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
+                Console.WriteLine("Bienvenido al sistema de préstamos de la universidad CMD");
                 Console.WriteLine(
                     "Digite 1 para gestionar materiales\n" +
                     "Digite 2 para gestionar préstamos\n" +
                     "Digite 3 para gestionar reservas\n" +
-                    "Digite 4 para salir");
+                    "Digite 4 para regresar al menu anterior\n" +
+                    "Digite 5 para salir");
+
+                int opcion = int.Parse(Console.ReadLine());
+
                 switch (opcion)
                 {
                     case 1:
-                        IMaterialManagement IMaterialManagement = new IMaterialManagement();
+                        Console.WriteLine("Gestionando materiales...");
                         break;
                     case 2:
-                        ILoanManagement ILoanManagement = new ILoanManagement();
+                        Console.WriteLine("Gestionando préstamos...");
                         break;
                     case 3:
-                        IReserveManagement IReserveManagement = new IReserveManagement();
+                        Console.WriteLine("Gestionando reservas...");
                         break;
                     case 4:
+                        Console.WriteLine("regresando al menu anterior...");
                         flagMenu = false;
                         break;
+                    case 5:
+                        Console.WriteLine("Saliendo del sistema...");
+                        Environment.Exit(0);
+                        break;
                     default:
-                        Console.WriteLine("Opcion invalida");
+                        Console.WriteLine("Opción inválida. Intente de nuevo.");
                         break;
                 }
             }
         }
+    }
 }
