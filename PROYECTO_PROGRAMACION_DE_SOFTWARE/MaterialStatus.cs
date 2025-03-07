@@ -8,9 +8,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal enum MaterialStatus
     {
-        NEW,
-        USED, 
-        WORN,
-        DAMAGED
+        Available,
+        Reserved, 
+        Loaned
     }
 }

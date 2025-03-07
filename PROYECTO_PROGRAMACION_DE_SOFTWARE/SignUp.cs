@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {

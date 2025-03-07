@@ -19,22 +19,33 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
+                        AdministratorMenu administratorMenu = new AdministratorMenu();
+                        administratorMenu.ShowMenu();
+                        /*
                         User user = LogIn.NewLogIn();
                         if (user!=null)
                         {
-                            if (user.TypeUser != TypeUser.LIBRARIAN)
+                            if (user.TypeUser != TypeUser.Librarian)
                             {
-                                UserOptions userOptions = new UserOptions();
+                                LibrarianMenu librarianMenu = new LibrarianMenu();
+                                librarianMenu.ShowMenu();
+                            }
+                            else if (user.TypeUser == TypeUser.Administrator)
+                            {
+                                AdministratorMenu administratorMenu = new AdministratorMenu();
+                                administratorMenu.ShowMenu();
                             }
                             else
                             {
-                                Manager manager = new Manager();
+                                UserMenu userMenu = new UserMenu();
+                                userMenu.ShowMenu();
                             }
                         }
                         else
                         {
                             Console.WriteLine("Debes registrarte");
                         }
+                        */
                         break;
 
                     case 2:

@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal interface IMaterialManagement
+    internal interface IUserManagement
     {
-        /*
-        void CreateMaterial();
-        void UpdateMaterial();
-        void DeleteMaterial();
-        */
+        void SearchUser();
+        void CreateUser();
+        void UpdateUser();
+        void DeleteUser();
     }
 }

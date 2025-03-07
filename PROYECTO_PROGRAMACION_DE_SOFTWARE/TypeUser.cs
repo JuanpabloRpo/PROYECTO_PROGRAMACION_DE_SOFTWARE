@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +8,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal enum TypeUser
     {
-        STUDENT,
-        TEACHER,
-        EMPLOYEE,
-        LIBRARIAN
+        Student,
+        Teacher,
+        Employee,
+        Librarian,
+        Administrator
     }
 }

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal interface IMaterialManagement
+    internal enum ReservationStatus
     {
-        /*
-        void CreateMaterial();
-        void UpdateMaterial();
-        void DeleteMaterial();
-        */
+        Pending,
+        Accepted,
+        Expired,
+        Rejected,
+        Canceled
     }
 }
