@@ -17,11 +17,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 int opcion = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
                 Console.WriteLine(
-                "Digite 1 para gestionar materiales\n" +
-                "Digite 2 para gestionar préstamos\n" +
-                "Digite 3 para gestionar reservas\n" +
-                "Digite 4 para salir");
-
+                    "Digite 1 para gestionar materiales\n" +
+                    "Digite 2 para gestionar préstamos\n" +
+                    "Digite 3 para gestionar reservas\n" +
+                    "Digite 4 para salir");
                 switch (opcion)
                 {
                     case 1:

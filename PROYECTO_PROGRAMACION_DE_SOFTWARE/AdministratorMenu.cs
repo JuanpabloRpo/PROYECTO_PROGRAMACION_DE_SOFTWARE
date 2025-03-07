@@ -17,11 +17,11 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 int opcion = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
                 Console.WriteLine(
-                "Digite 1 para gestionar materiales\n" +
-                "Digite 2 para gestionar préstamos\n" +
-                "Digite 3 para gestionar reservas\n" +
-                "Digite 4 para gestionar usuarios\n" +
-                "Digite 5 para salir");
+                    "Digite 1 para gestionar materiales\n" +
+                    "Digite 2 para gestionar préstamos\n" +
+                    "Digite 3 para gestionar reservas\n" +
+                    "Digite 4 para gestionar usuarios\n" +
+                    "Digite 5 para salir");
 
                 switch (opcion)
                 {
@@ -32,7 +32,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         ILoanManagement ILoanManagement = new ILoanManagement();
                         break;
                     case 3:
-                        IReserveManagement IReserveManagement = new IReserveManagement();
+                        IReservationManagement IReservationManagement = new IReservationManagement();
                         break;
                     case 4:
                         IUserManagement IUserManagement = new IUserManagement();

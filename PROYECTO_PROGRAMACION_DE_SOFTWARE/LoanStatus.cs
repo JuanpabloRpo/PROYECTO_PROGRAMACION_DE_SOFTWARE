@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal enum MaterialStatus
+    internal enum LoanStatus
     {
-        Available,
-        Reserved, 
-        Loaned,
-        Damaged
+        Active,
+        Overdue,
+        Completed,
+        Canceled
     }
 }

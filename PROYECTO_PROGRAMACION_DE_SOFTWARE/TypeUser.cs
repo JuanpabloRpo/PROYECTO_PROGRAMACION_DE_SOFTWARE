@@ -8,10 +8,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal enum TypeUser
     {
-        ESTUDENT,
-        TEACHER,
-        EMPLOYEE,
-        LIBRARIAN,
-        ADMINISTRATOR
+        Student,
+        Teacher,
+        Employee,
+        Librarian,
+        Administrator
     }
 }

@@ -43,13 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorMenu.cs" />
     <Compile Include="AudioVisual.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="ILoanManagement.cs" />
     <Compile Include="IMaterialManagement.cs" />
+    <Compile Include="IReservationManagement.cs" />
+    <Compile Include="IUserManagement.cs" />
+    <Compile Include="LibrarianMenu.cs" />
     <Compile Include="Loan.cs" />
     <Compile Include="LogIn.cs" />
-    <Compile Include="Manager.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="MaterialStatus.cs" />
     <Compile Include="Person.cs" />
@@ -59,7 +63,7 @@
     <Compile Include="SignUp.cs" />
     <Compile Include="TypeUser.cs" />
     <Compile Include="User.cs" />
-    <Compile Include="UserOptions.cs" />
+    <Compile Include="User Menu.cs" />
     <Compile Include="Validaciones.cs" />
   </ItemGroup>
   <ItemGroup>

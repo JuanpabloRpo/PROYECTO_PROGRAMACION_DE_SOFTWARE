@@ -8,7 +8,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         {
 
             Validaciones validar = new Validaciones();
-            TypeUser typeuser = TypeUser.ESTUDENT;
+            TypeUser typeuser = TypeUser.Student;
             bool flag = true;
             while (flag)
             {
@@ -19,7 +19,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
-                        typeuser = TypeUser.ESTUDENT;
+                        typeuser = TypeUser.Student;
                         flag = false;
                         break;
                     case 2:
@@ -27,7 +27,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Console.WriteLine("Digite el codigo de verificacion de maestro: ");
                         if (Console.ReadLine().Equals("159357"))
                         {
-                            typeuser = TypeUser.TEACHER;
+                            typeuser = TypeUser.Teacher;
                             flag = false;
                         }
                         else
@@ -41,7 +41,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Console.WriteLine("Digite el codigo de verificacion de empleado: ");
                         if (Console.ReadLine().Equals("159357"))
                         {
-                            typeuser = TypeUser.EMPLOYEE;
+                            typeuser = TypeUser.Employee;
                             flag = false;
                         }
                         else
