@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal interface IUserManagement
+    internal enum MaterialCondition
     {
-        void SearchUser();
-        void CreateUser();
-        void UpdateUser();
-        void DeleteUser();
+        New,
+        Usado,
+        Worn,
+        Damaged
     }
 }
