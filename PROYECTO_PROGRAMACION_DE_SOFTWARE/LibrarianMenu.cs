@@ -8,7 +8,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class LibrarianMenu
     {
-        public LibrarianMenu()
+        public LibrarianMenu() { }
+        public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
             bool flagMenu = true;

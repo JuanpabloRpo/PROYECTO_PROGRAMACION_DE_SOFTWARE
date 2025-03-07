@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class IUserManagement
+    internal interface IUserManagement
     {
-        public IUserManagement()
-        {
-            Console.WriteLine("Bienvenido");
-            public void CreateUser(User user);
-            public void DeleteUser(string id) { }
-            public void ModifyUser(string id, Dictionary<string, object> data) { }
-    }
+        void SearchUser();
+        void CreateUser();
+        void UpdateUser();
+        void DeleteUser();
     }
 }

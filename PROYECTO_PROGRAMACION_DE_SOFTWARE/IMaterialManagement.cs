@@ -6,14 +6,10 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class IMaterialManagement
+    internal interface IMaterialManagement
     {
-        public IMaterialManagement()
-        {
-            Console.WriteLine("Bienvenido");
-            void CreateMaterial(Material material);
-            void ModifyMaterial(string id, Dictionary<string, object> data);
-            void DeleteMaterial(string id);
-        }
+        void CreateMaterial();
+        void UpdateMaterial();
+        void DeleteMaterial();
     }
 }

@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class AdministratorMenu
+    internal class UserManager
     {
-        public AdministratorMenu() { }
+        private IUserManagement userMethods;
+
+        public UserManager(IUserManagement userMethods)
+        {
+            this.userMethods = userMethods;
+        }
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
@@ -16,35 +21,34 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             while (flagMenu)
             {
-                int opcion = int.Parse(Console.ReadLine());
-                Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
+                int option = int.Parse(Console.ReadLine());
+                Console.WriteLine("Bienvenido al gestor de usuarios.");
                 Console.WriteLine(
-                    "Digite 1 para gestionar materiales\n" +
-                    "Digite 2 para gestionar préstamos\n" +
-                    "Digite 3 para gestionar reservas\n" +
-                    "Digite 4 para gestionar usuarios\n" +
+                    "Digite 1 para buscar un usuario\n" +
+                    "Digite 2 para crear un usuario\n" +
+                    "Digite 3 para actualizar los datos de un usuario\n" +
+                    "Digite 4 para eliminar un usuario\n" +
                     "Digite 5 para salir");
 
-                switch (opcion)
+                switch (option)
                 {
                     case 1:
-
+                        userMethods.SearchUser();
                         break;
                     case 2:
-
+                        userMethods.CreateUser();
                         break;
                     case 3:
-
+                        userMethods.UpdateUser();
                         break;
                     case 4:
-                        UserManager userManager = new UserManager(new UserMethods());
-                        userManager.ShowMenu();
+                        userMethods.DeleteUser();
                         break;
                     case 5:
                         flagMenu = false;
                         break;
                     default:
-                        Console.WriteLine("Opcion invalida");
+                        Console.WriteLine("Invalid option");
                         break;
                 }
             }

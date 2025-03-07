@@ -8,7 +8,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class UserMenu
     {
-        public UserMenu() 
+        public UserMenu() { }
+        public void ShowMenu()
         {
             Validaciones validar = new Validaciones(); 
             Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
