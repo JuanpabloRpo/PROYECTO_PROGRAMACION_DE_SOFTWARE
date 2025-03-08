@@ -16,7 +16,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             while (flagMenu)
             {
-                Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
+                Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD - Administrador -");
                 Console.WriteLine(
                     "Digite 1 para gestionar materiales\n" +
                     "Digite 2 para gestionar préstamos\n" +

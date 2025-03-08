@@ -8,8 +8,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class Book : Material
     {
-        private string Genre;
-        private int Pages;
+        public string Genre { get; set; }
+        public int Pages { get; set; }
 
         public Book(string id, string title, string author, int publicationYear, MaterialStatus status, string genre, int pages)
             : base(id, title, author, publicationYear, status)

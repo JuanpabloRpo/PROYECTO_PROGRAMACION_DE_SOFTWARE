@@ -1,32 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class UserMenu
     {
-        private IMaterialManagement materialMethods;
-        private ILoanManagement loanMethods;
-        private IReservationManagement reservationMethods;
+        private MaterialMethods materialMethods;
+        private LoanMethods loanMethods;
+        private ReservationMethods reservationMethods;
 
-        public UserMenu(IMaterialManagement materialMethods, ILoanManagement loanMethods, IReservationManagement reservationMethods)
-        {
-            this.materialMethods = materialMethods;
-            this.loanMethods = loanMethods;
-            this.reservationMethods = reservationMethods;
-        }
-
-        public void ShowMenu()
+        public void ShowMenu(User user)
         {
             Validaciones validar = new Validaciones();
             bool flagMenu = true;
 
             while (flagMenu)
             {
-                Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
+                Console.WriteLine($" - {user.FirstName} {user.LastName} - Bienvenido al sistema de prestamos de la universidad CMD ");
                 Console.WriteLine(
                     "Digite 1 para consultar el material disponible:\n" +
                     "Digite 2 para Reservar material\n" +

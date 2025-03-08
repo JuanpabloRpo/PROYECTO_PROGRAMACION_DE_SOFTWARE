@@ -85,7 +85,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
-                        return TypeUser.STUDENT;
+                        return TypeUser.Student;
                         
                         break;
                     case 2:
@@ -93,7 +93,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Console.WriteLine("Digite el codigo de verificacion de maestro: ");
                         if (Console.ReadLine().Equals("159357"))
                         {
-                            return TypeUser.TEACHER;
+                            return TypeUser.Teacher;
                             
                         }
                         else
@@ -107,7 +107,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Console.WriteLine("Digite el codigo de verificacion de empleado: ");
                         if (Console.ReadLine().Equals("159357"))
                         {
-                            return TypeUser.EMPLOYEE;
+                            return TypeUser.Employee;
                             
                         }
                         else

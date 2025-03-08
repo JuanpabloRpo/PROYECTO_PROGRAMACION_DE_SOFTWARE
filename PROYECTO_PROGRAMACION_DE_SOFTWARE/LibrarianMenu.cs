@@ -12,20 +12,13 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         private ILoanManagement loanMethods;
         private IReservationManagement reservationMethods;
 
-        public LibrarianMenu(IMaterialManagement materialMethods, ILoanManagement loanMethods, IReservationManagement reservationMethods)
-        {
-            this.materialMethods = materialMethods;
-            this.loanMethods = loanMethods;
-            this.reservationMethods = reservationMethods;
-        }
-
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
             bool flagMenu = true;
             while (flagMenu)
             {
-                Console.WriteLine("Bienvenido al sistema de préstamos de la universidad CMD");
+                Console.WriteLine("Bienvenido al sistema de préstamos de la universidad CMD - Bibliotecario - ");
                 Console.WriteLine(
                     "Digite 1 para gestionar materiales\n" +
                     "Digite 2 para gestionar préstamos\n" +
