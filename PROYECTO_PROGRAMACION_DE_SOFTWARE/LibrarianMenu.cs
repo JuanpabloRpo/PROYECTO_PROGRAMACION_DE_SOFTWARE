@@ -8,7 +8,17 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class LibrarianMenu
     {
-        public LibrarianMenu() { }
+        private IMaterialManagement materialMethods;
+        private ILoanManagement loanMethods;
+        private IReservationManagement reservationMethods;
+
+        public LibrarianMenu(IMaterialManagement materialMethods, ILoanManagement loanMethods, IReservationManagement reservationMethods)
+        {
+            this.materialMethods = materialMethods;
+            this.loanMethods = loanMethods;
+            this.reservationMethods = reservationMethods;
+        }
+
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
@@ -19,28 +29,34 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 Console.WriteLine(
                     "Digite 1 para gestionar materiales\n" +
                     "Digite 2 para gestionar préstamos\n" +
-                    "Digite 3 para gestionar reservas\n" +
-                    "Digite 4 para regresar al menu anterior\n" +
-                    "Digite 5 para salir");
+                    "Digite 3 para aceptar una reserva\n" +
+                    "Digite 4 para rechazar una reserva\n" +
+                    "Digite 5 para regresar al menu anterior\n" +
+                    "Digite 6 para salir");
 
                 int opcion = int.Parse(Console.ReadLine());
 
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("Gestionando materiales...");
+                        MaterialManager materialManager = new MaterialManager(new MaterialMethods());
+                        materialManager.ShowMenu();
                         break;
                     case 2:
-                        Console.WriteLine("Gestionando préstamos...");
+                        LoanManager loanManager = new LoanManager(new LoanMethods());
+                        loanManager.ShowMenu();
                         break;
                     case 3:
-                        Console.WriteLine("Gestionando reservas...");
+                        reservationMethods.AcceptReservation();
                         break;
                     case 4:
+                        reservationMethods.RejectReservation();
+                        break;
+                    case 5:
                         Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
-                    case 5:
+                    case 6:
                         Console.WriteLine("Saliendo del sistema...");
                         Environment.Exit(0);
                         break;

@@ -8,7 +8,17 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class UserMenu
     {
-        public UserMenu() { }
+        private IMaterialManagement materialMethods;
+        private ILoanManagement loanMethods;
+        private IReservationManagement reservationMethods;
+
+        public UserMenu(IMaterialManagement materialMethods, ILoanManagement loanMethods, IReservationManagement reservationMethods)
+        {
+            this.materialMethods = materialMethods;
+            this.loanMethods = loanMethods;
+            this.reservationMethods = reservationMethods;
+        }
+
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
@@ -31,17 +41,16 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("Material disponible: ");
+                        materialMethods.ViewAvaraibleMaterials();
                         break;
                     case 2:
-                        Console.WriteLine("Reservar material: ");
-
+                        reservationMethods.CreateReservation();
                         break;
                     case 3:
-                        Console.WriteLine("Estado de algun prestamo: ");
+                        loanMethods.SearchLoan();
                         break;
                     case 4:
-                        Console.WriteLine("Renovar un prestamo: ");
+                        loanMethods.ExtendLoan();
                         break;
                     case 5:
                         Console.WriteLine("Regresando al menu anterior...");
