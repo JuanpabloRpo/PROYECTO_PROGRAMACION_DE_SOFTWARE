@@ -26,32 +26,33 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                     "Digite 6 para salir");
 
                 int opcion = int.Parse(Console.ReadLine());
+                Console.Clear();
 
-            switch (opcion)
-            {
+                switch (opcion)
+                {
+                    case 1:
+                        Console.WriteLine("Material disponible: ");
+                        break;
+                    case 2:
+                        Console.WriteLine("Reservar material: ");
 
-                case 1:
-                    Console.WriteLine("Material disponible: ");
-                    break;
-                case 2:
-                    Console.WriteLine("Reservar material: ");
-                    break;
-                case 3:
-                    Console.WriteLine("Estado de algun prestamo: ");
-                    break;
-                case 4:
-                    Console.WriteLine("Renovar un prestamo: ");
-                    break;
-                case 5:
-                    Console.WriteLine("regresando al menu anterior...");
-                    flagMenu = false;
-                    break;
-                case 6:
-                    Console.WriteLine("Saliendo del sistema...");
-                    Environment.Exit(0);
-                    break;
-                default:
-                    break;
+                        break;
+                    case 3:
+                        Console.WriteLine("Estado de algun prestamo: ");
+                        break;
+                    case 4:
+                        Console.WriteLine("Renovar un prestamo: ");
+                        break;
+                    case 5:
+                        Console.WriteLine("regresando al menu anterior...");
+                        flagMenu = false;
+                        break;
+                    case 6:
+                        Console.WriteLine("Saliendo del sistema...");
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        break;
                 }
             }
         }

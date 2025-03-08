@@ -15,7 +15,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 Console.WriteLine("Digite 1 para iniciar sesion\n" +
                     "Digite 2 para registrarse\n" +
                     "Digite 3 para salir");
+
                 int opcion = int.Parse(validar.eleccionAValidar(1,Console.ReadLine()));
+                Console.Clear();
+
                 switch (opcion)
                 {
                     case 1:

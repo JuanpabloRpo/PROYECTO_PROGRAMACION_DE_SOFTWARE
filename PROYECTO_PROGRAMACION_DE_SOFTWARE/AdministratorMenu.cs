@@ -26,6 +26,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                     "Digite 6 para salir");
 
                 int opcion = int.Parse(Console.ReadLine());
+                Console.Clear();
 
                 switch (opcion)
                 {
@@ -36,7 +37,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Console.WriteLine("Gestionando préstamos...");
                         break;
                     case 3:
-                        Console.WriteLine("Gestionando reservas...");
+                        ReservationManager reservationManager = new ReservationManager(new ReservationMethods());
+                        reservationManager.ShowMenu();
                         break;
                     case 4:
                         UserManager userManager = new UserManager(new UserMethods());

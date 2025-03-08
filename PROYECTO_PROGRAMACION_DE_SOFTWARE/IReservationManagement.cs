@@ -8,6 +8,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal interface IReservationManagement
     {
+        void SearchReservation();
         void CreateReservation();
         void AcceptReservation();
         void RejectReservation();
