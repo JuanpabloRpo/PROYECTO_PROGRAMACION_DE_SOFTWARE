@@ -113,16 +113,16 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             {
                 if (lector["userName"].ToString().Equals(UserName))
                 {
-                    user.Id = int.Parse(lector["id"].ToString());
-                    user.FirstName = lector["nameUser"].ToString();
-                    user.LastName = lector["paternalName"].ToString();
-                    user.MiddleName = lector["mothersName"].ToString();
+                    user.Id = int.Parse(lector["userId"].ToString());
+                    user.FirstName = lector["firstName"].ToString();
+                    user.LastName = lector["lastName"].ToString();
+                    user.MiddleName = lector["middleName"].ToString();
                     user.Age = int.Parse(lector["age"].ToString());
-                    user.Arrears = int.Parse(lector["arrears"].ToString());
+                    user.Arrears = int.Parse(lector["isInDebt"].ToString());
                     user.Email = lector["email"].ToString();
-                    user.UserName = lector["userName"].ToString();
-                    user.Password = lector["Userpassword"].ToString();
-                    user.TypeUser = (TypeUser)Enum.Parse(typeof(TypeUser), lector["TypeUser"].ToString());
+                    user.UserName = lector["username"].ToString();
+                    user.Password = lector["userPassword"].ToString();
+                    user.TypeUser = (TypeUser)Enum.Parse(typeof(TypeUser), lector["typeUser"].ToString());
                 }
             }
             connection.Close();

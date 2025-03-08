@@ -26,7 +26,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         User user = LogIn.NewLogIn();
                         if (user!=null)
                         {
-                            if (user.TypeUser != TypeUser.Librarian)
+                            if (user.TypeUser != TypeUser.LIBRARIAN)
                             {
                                 LibrarianMenu librarianMenu = new LibrarianMenu();
                                 librarianMenu.ShowMenu();
