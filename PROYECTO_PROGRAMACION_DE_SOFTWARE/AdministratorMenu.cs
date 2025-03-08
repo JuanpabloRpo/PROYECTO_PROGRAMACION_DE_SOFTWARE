@@ -26,17 +26,21 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                     "Digite 6 para salir");
 
                 int opcion = int.Parse(Console.ReadLine());
+                Console.Clear();
 
                 switch (opcion)
                 {
                     case 1:
-                        Console.WriteLine("Gestionando materiales...");
+                        MaterialManager materialManager = new MaterialManager(new MaterialMethods());
+                        materialManager.ShowMenu();
                         break;
                     case 2:
-                        Console.WriteLine("Gestionando préstamos...");
+                        LoanManager loanManager = new LoanManager(new LoanMethods());
+                        loanManager.ShowMenu();
                         break;
                     case 3:
-                        Console.WriteLine("Gestionando reservas...");
+                        ReservationManager reservationManager = new ReservationManager(new ReservationMethods());
+                        reservationManager.ShowMenu();
                         break;
                     case 4:
                         UserManager userManager = new UserManager(new UserMethods());
@@ -51,7 +55,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine("Opcion invalida");
+                        Console.WriteLine("Opción inválida. Intente de nuevo.");
                         break;
                 }
             }

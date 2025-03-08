@@ -8,7 +8,17 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class UserMenu
     {
-        public UserMenu() { }
+        private IMaterialManagement materialMethods;
+        private ILoanManagement loanMethods;
+        private IReservationManagement reservationMethods;
+
+        public UserMenu(IMaterialManagement materialMethods, ILoanManagement loanMethods, IReservationManagement reservationMethods)
+        {
+            this.materialMethods = materialMethods;
+            this.loanMethods = loanMethods;
+            this.reservationMethods = reservationMethods;
+        }
+
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
@@ -26,32 +36,33 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                     "Digite 6 para salir");
 
                 int opcion = int.Parse(Console.ReadLine());
+                Console.Clear();
 
-            switch (opcion)
-            {
-
-                case 1:
-                    Console.WriteLine("Material disponible: ");
-                    break;
-                case 2:
-                    Console.WriteLine("Reservar material: ");
-                    break;
-                case 3:
-                    Console.WriteLine("Estado de algun prestamo: ");
-                    break;
-                case 4:
-                    Console.WriteLine("Renovar un prestamo: ");
-                    break;
-                case 5:
-                    Console.WriteLine("regresando al menu anterior...");
-                    flagMenu = false;
-                    break;
-                case 6:
-                    Console.WriteLine("Saliendo del sistema...");
-                    Environment.Exit(0);
-                    break;
-                default:
-                    break;
+                switch (opcion)
+                {
+                    case 1:
+                        materialMethods.ViewAvaraibleMaterials();
+                        break;
+                    case 2:
+                        reservationMethods.CreateReservation();
+                        break;
+                    case 3:
+                        loanMethods.SearchLoan();
+                        break;
+                    case 4:
+                        loanMethods.ExtendLoan();
+                        break;
+                    case 5:
+                        Console.WriteLine("Regresando al menu anterior...");
+                        flagMenu = false;
+                        break;
+                    case 6:
+                        Console.WriteLine("Saliendo del sistema...");
+                        Environment.Exit(0);
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida. Intente de nuevo.");
+                        break;
                 }
             }
         }

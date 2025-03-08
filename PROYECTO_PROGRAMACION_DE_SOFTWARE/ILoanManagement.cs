@@ -8,6 +8,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal interface ILoanManagement
     {
+        void SearchLoan();
         void CreateLoan();
         void ExtendLoan();
         void ReturnMaterial();

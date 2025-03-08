@@ -10,7 +10,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public static void Insert(User user)
         {
             connection.Open();
-            string consulta = $"INSERT INTO NormalUser(id,nameUser,paternalName,mothersName,age,arrears,email,userName,Userpassword,TypeUser) VALUES ({user.Id},'{user.Name}','{user.ApellidoPaterno}','{user.ApellidoMaterno}',{user.Edad},{user.Arrears},'{user.Email}','{user.UserName}','{user.Password}','{user.TypeUser.ToString()}' )";
+            string consulta = $"INSERT INTO NormalUser(id,nameUser,paternalName,mothersName,age,arrears,email,userName,Userpassword,TypeUser) " +
+                $"VALUES ({user.Id},'{user.Name}','{user.ApellidoPaterno}','{user.ApellidoMaterno}',{user.Edad},{user.Arrears},'{user.Email}'," +
+                $"'{user.UserName}','{user.Password}','{user.TypeUser.ToString()}' )";
 
             SqlCommand comando = new SqlCommand(consulta, connection);
             comando.ExecuteNonQuery();

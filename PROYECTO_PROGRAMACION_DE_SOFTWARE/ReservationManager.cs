@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class UserManager
+    class ReservationManager
     {
-        private IUserManagement userMethods;
+        private IReservationManagement reservationMethods;
 
-        public UserManager(IUserManagement userMethods)
+        public ReservationManager(IReservationManagement reservationMethods)
         {
-            this.userMethods = userMethods;
+            this.reservationMethods = reservationMethods;
         }
         public void ShowMenu()
         {
@@ -21,14 +21,15 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             while (flagMenu)
             {
-                Console.WriteLine("Bienvenido al gestor de usuarios.");
+                Console.WriteLine("Bienvenido al gestor de reservas.");
                 Console.WriteLine(
-                    "Digite 1 para buscar un usuario\n" +
-                    "Digite 2 para crear un usuario\n" +
-                    "Digite 3 para actualizar los datos de un usuario\n" +
-                    "Digite 4 para eliminar un usuario\n" +
-                    "Digite 5 para regresar al menu anterior\n" +
-                    "Digite 6 para salir");
+                    "Digite 1 para buscar una reserva\n" +
+                    "Digite 2 para hacer una reserva\n" +
+                    "Digite 3 para cancelar una reserva\n" +
+                    "Digite 4 para aceptar una reserva\n" +
+                    "Digite 5 para rechazar una reserva\n" +
+                    "Digite 6 para regresar al menu anterior\n" +
+                    "Digite 7 para salir");
 
                 int option = int.Parse(Console.ReadLine());
                 Console.Clear();
@@ -36,22 +37,25 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (option)
                 {
                     case 1:
-                        userMethods.SearchUser();
+                        reservationMethods.SearchReservation();
                         break;
                     case 2:
-                        userMethods.CreateUser();
+                        reservationMethods.CreateReservation();
                         break;
                     case 3:
-                        userMethods.UpdateUser();
+                        reservationMethods.CancelReservation();
                         break;
                     case 4:
-                        userMethods.DeleteUser();
+                        reservationMethods.AcceptReservation();
                         break;
                     case 5:
+                        reservationMethods.RejectReservation();
+                        break;
+                    case 6:
                         Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
-                    case 6:
+                    case 7:
                         Console.WriteLine("Saliendo del sistema...");
                         Environment.Exit(0);
                         break;

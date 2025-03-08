@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class UserManager
+    class MaterialManager
     {
-        private IUserManagement userMethods;
+        private IMaterialManagement materialMethods;
 
-        public UserManager(IUserManagement userMethods)
+        public MaterialManager(IMaterialManagement materialMethods)
         {
-            this.userMethods = userMethods;
+            this.materialMethods = materialMethods;
         }
         public void ShowMenu()
         {
@@ -21,14 +21,15 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             while (flagMenu)
             {
-                Console.WriteLine("Bienvenido al gestor de usuarios.");
+                Console.WriteLine("Bienvenido al gestor de préstamos.");
                 Console.WriteLine(
-                    "Digite 1 para buscar un usuario\n" +
-                    "Digite 2 para crear un usuario\n" +
-                    "Digite 3 para actualizar los datos de un usuario\n" +
-                    "Digite 4 para eliminar un usuario\n" +
-                    "Digite 5 para regresar al menu anterior\n" +
-                    "Digite 6 para salir");
+                    "Digite 1 para buscar material\n" +
+                    "Digite 2 para crear un material\n" +
+                    "Digite 3 para modificar un material\n" +
+                    "Digite 4 para eliminar un material\n" +
+                    "Digite 5 para ver materiales disponibles\n" +
+                    "Digite 6 para regresar al menu anterior\n" +
+                    "Digite 7 para salir");
 
                 int option = int.Parse(Console.ReadLine());
                 Console.Clear();
@@ -36,22 +37,25 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (option)
                 {
                     case 1:
-                        userMethods.SearchUser();
+                        materialMethods.SearchMaterial();
                         break;
                     case 2:
-                        userMethods.CreateUser();
+                        materialMethods.CreateMaterial();
                         break;
                     case 3:
-                        userMethods.UpdateUser();
+                        materialMethods.UpdateMaterial();
                         break;
                     case 4:
-                        userMethods.DeleteUser();
+                        materialMethods.DeleteMaterial();
                         break;
                     case 5:
+                        materialMethods.ViewAvaraibleMaterials();
+                        break;
+                    case 6:
                         Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
-                    case 6:
+                    case 7:
                         Console.WriteLine("Saliendo del sistema...");
                         Environment.Exit(0);
                         break;
