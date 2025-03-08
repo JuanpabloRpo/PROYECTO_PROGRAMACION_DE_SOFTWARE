@@ -10,9 +10,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         public string type { get; }
 
-        public MaterialType(string Mtype)
+        public MaterialType(string materialType)
         {
-            this.type = Mtype;
+            this.type = materialType;
         }
         public static MaterialType Mathematics => new MaterialType("Mathematics");
         public static MaterialType Medicine => new MaterialType("Medicine");

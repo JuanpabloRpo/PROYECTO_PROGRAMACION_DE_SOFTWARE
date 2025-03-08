@@ -59,6 +59,8 @@
     <Compile Include="LogIn.cs" />
     <Compile Include="Material.cs" />
     <Compile Include="MaterialCondition.cs" />
+    <Compile Include="MaterialManager.cs" />
+    <Compile Include="MaterialMethods.cs" />
     <Compile Include="MaterialStatus.cs" />
     <Compile Include="MaterialType.cs" />
     <Compile Include="Person.cs" />

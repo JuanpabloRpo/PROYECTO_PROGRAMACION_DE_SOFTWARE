@@ -8,10 +8,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal interface IMaterialManagement
     {
-        /*
+        void SearchMaterial();
         void CreateMaterial();
         void UpdateMaterial();
         void DeleteMaterial();
-        */
+        void ViewAvaraibleMaterials();
     }
 }
