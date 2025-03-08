@@ -8,6 +8,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class LoanMethods : ILoanManagement
     {
+        public void SearchLoan()
+        {
+            Console.WriteLine("Buscando préstamo...");
+        }
         public void CreateLoan()
         {
             Console.WriteLine("Creando préstamo...");
