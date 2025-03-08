@@ -37,7 +37,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Console.WriteLine("Gestionando reservas...");
                         break;
                     case 4:
-                        Console.WriteLine("regresando al menu anterior...");
+                        Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
                     case 5:

@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
-    internal class AdministratorMenu
+    class LoanManager
     {
-        public AdministratorMenu() { }
+        private ILoanManagement loanMethods;
+
+        public LoanManager(ILoanManagement loanMethods)
+        {
+            this.loanMethods = loanMethods;
+        }
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();
@@ -16,37 +21,34 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
             while (flagMenu)
             {
-                Console.WriteLine("Bienvenido al sistema de prestamos de la universidad CMD");
+                Console.WriteLine("Bienvenido al gestor de préstamos.");
                 Console.WriteLine(
-                    "Digite 1 para gestionar materiales\n" +
-                    "Digite 2 para gestionar préstamos\n" +
-                    "Digite 3 para gestionar reservas\n" +
-                    "Digite 4 para gestionar usuarios\n" +
+                    "Digite 1 para crear préstamo\n" +
+                    "Digite 2 para extender un préstamo\n" +
+                    "Digite 3 para regresar un préstamo\n" +
+                    "Digite 4 para cancelar un préstamo\n" +
                     "Digite 5 para regresar al menu anterior\n" +
                     "Digite 6 para salir");
 
-                int opcion = int.Parse(Console.ReadLine());
+                int option = int.Parse(Console.ReadLine());
                 Console.Clear();
 
-                switch (opcion)
+                switch (option)
                 {
                     case 1:
-                        Console.WriteLine("Gestionando materiales...");
+                        loanMethods.CreateLoan();
                         break;
                     case 2:
-                        LoanManager loanManager = new LoanManager(new LoanMethods());
-                        loanManager.ShowMenu();
+                        loanMethods.ExtendLoan();
                         break;
                     case 3:
-                        ReservationManager reservationManager = new ReservationManager(new ReservationMethods());
-                        reservationManager.ShowMenu();
+                        loanMethods.ReturnMaterial();
                         break;
                     case 4:
-                        UserManager userManager = new UserManager(new UserMethods());
-                        userManager.ShowMenu();
+                        loanMethods.CancelLoan();
                         break;
                     case 5:
-                        Console.WriteLine("regresando al menu anterior...");
+                        Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
                     case 6:
@@ -54,7 +56,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine("Opcion invalida");
+                        Console.WriteLine("Opción inválida. Intente de nuevo.");
                         break;
                 }
             }

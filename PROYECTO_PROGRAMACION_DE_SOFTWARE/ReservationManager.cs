@@ -24,7 +24,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 Console.WriteLine("Bienvenido al gestor de reservas.");
                 Console.WriteLine(
                     "Digite 1 para buscar una reserva\n" +
-                    "Digite 2 para crear una reserva\n" +
+                    "Digite 2 para hacer una reserva\n" +
                     "Digite 3 para cancelar una reserva\n" +
                     "Digite 4 para aceptar una reserva\n" +
                     "Digite 5 para rechazar una reserva\n" +
@@ -52,7 +52,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         reservationMethods.RejectReservation();
                         break;
                     case 6:
-                        Console.WriteLine("regresando al menu anterior...");
+                        Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
                     case 7:
@@ -60,7 +60,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine("Invalid option");
+                        Console.WriteLine("Opción inválida. Intente de nuevo.");
                         break;
                 }
             }
