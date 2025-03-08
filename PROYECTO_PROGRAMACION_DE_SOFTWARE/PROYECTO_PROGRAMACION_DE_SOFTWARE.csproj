@@ -53,6 +53,8 @@
     <Compile Include="IUserManagement.cs" />
     <Compile Include="LibrarianMenu.cs" />
     <Compile Include="Loan.cs" />
+    <Compile Include="LoanManager.cs" />
+    <Compile Include="LoanMethods.cs" />
     <Compile Include="LoanStatus.cs" />
     <Compile Include="LogIn.cs" />
     <Compile Include="Material.cs" />
@@ -66,7 +68,6 @@
     <Compile Include="ReservationManager.cs" />
     <Compile Include="ReservationMethods.cs" />
     <Compile Include="ReservationStatus.cs" />
-    <Compile Include="Reserve.cs" />
     <Compile Include="SignUp.cs" />
     <Compile Include="TypeUser.cs" />
     <Compile Include="User.cs" />

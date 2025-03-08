@@ -48,7 +48,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         userMethods.DeleteUser();
                         break;
                     case 5:
-                        Console.WriteLine("regresando al menu anterior...");
+                        Console.WriteLine("Regresando al menu anterior...");
                         flagMenu = false;
                         break;
                     case 6:
@@ -56,7 +56,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         Environment.Exit(0);
                         break;
                     default:
-                        Console.WriteLine("Invalid option");
+                        Console.WriteLine("Opción inválida. Intente de nuevo.");
                         break;
                 }
             }
