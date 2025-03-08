@@ -63,6 +63,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservation.cs" />
+    <Compile Include="ReservationManager.cs" />
+    <Compile Include="ReservationMethods.cs" />
     <Compile Include="ReservationStatus.cs" />
     <Compile Include="Reserve.cs" />
     <Compile Include="SignUp.cs" />
