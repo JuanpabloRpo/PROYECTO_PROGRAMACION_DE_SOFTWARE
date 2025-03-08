@@ -10,14 +10,14 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public static void Insert(User user)
         {
             connection.Open();
-            string consulta = $"INSERT INTO NormalUser(id,nameUser,paternalName,mothersName,age,arrears,email,userName,Userpassword,TypeUser) " +
-                $"VALUES ({user.Id},'{user.Name}','{user.ApellidoPaterno}','{user.ApellidoMaterno}',{user.Edad},{user.Arrears},'{user.Email}'," +
+            /*string consulta = $"INSERT INTO NormalUser(id,nameUser,paternalName,mothersName,age,arrears,email,userName,Userpassword,TypeUser) " +
+                $"VALUES ({user.Id1},'{user.Name}','{user.ApellidoPaterno}','{user.ApellidoMaterno}',{user.Edad},{user.Arrears},'{user.Email}'," +
                 $"'{user.UserName}','{user.Password}','{user.TypeUser.ToString()}' )";
 
             SqlCommand comando = new SqlCommand(consulta, connection);
             comando.ExecuteNonQuery();
             Console.WriteLine("Registro creado");
-            connection.Close();
+            connection.Close();*/
         }
 
         public static void Delet(int id)
@@ -114,10 +114,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 if (lector["userName"].ToString().Equals(UserName))
                 {
                     user.Id = int.Parse(lector["id"].ToString());
-                    user.Name = lector["nameUser"].ToString();
-                    user.ApellidoPaterno = lector["paternalName"].ToString();
-                    user.ApellidoMaterno = lector["mothersName"].ToString();
-                    user.Edad = int.Parse(lector["age"].ToString());
+                    user.FirstName = lector["nameUser"].ToString();
+                    user.LastName = lector["paternalName"].ToString();
+                    user.MiddleName = lector["mothersName"].ToString();
+                    user.Age = int.Parse(lector["age"].ToString());
                     user.Arrears = int.Parse(lector["arrears"].ToString());
                     user.Email = lector["email"].ToString();
                     user.UserName = lector["userName"].ToString();

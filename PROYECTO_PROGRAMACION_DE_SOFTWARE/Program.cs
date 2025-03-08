@@ -22,20 +22,13 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                 switch (opcion)
                 {
                     case 1:
-                        IMaterialManagement materialMethods = new MaterialMethods();
-                        ILoanManagement loanMethods = new LoanMethods();
-                        IReservationManagement reservationMethods = new ReservationMethods();
-
-                        AdministratorMenu administratorMenu = new AdministratorMenu();
-                        administratorMenu.ShowMenu();
-
-                        /*
+                        
                         User user = LogIn.NewLogIn();
                         if (user!=null)
                         {
                             if (user.TypeUser != TypeUser.Librarian)
                             {
-                                LibrarianMenu librarianMenu = new LibrarianMenu(materialMethods, loanMethods, reservationMethods);
+                                LibrarianMenu librarianMenu = new LibrarianMenu();
                                 librarianMenu.ShowMenu();
                             }
                             else if (user.TypeUser == TypeUser.Administrator)
@@ -45,15 +38,15 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                             }
                             else
                             {
-                                UserMenu userMenu = new UserMenu(materialMethods, loanMethods, reservationMethods);
-                                userMenu.ShowMenu();
+                                UserMenu userMenu = new UserMenu();
+                                userMenu.ShowMenu(user);
                             }
                         }
                         else
                         {
                             Console.WriteLine("Debes registrarte");
                         }
-                        */
+                        
                         break;
 
                     case 2:

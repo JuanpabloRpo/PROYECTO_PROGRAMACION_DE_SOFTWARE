@@ -49,6 +49,7 @@
     <Compile Include="DataBase.cs" />
     <Compile Include="ILoanManagement.cs" />
     <Compile Include="IMaterialManagement.cs" />
+    <Compile Include="InsertDataBase.cs" />
     <Compile Include="IReservationManagement.cs" />
     <Compile Include="IUserManagement.cs" />
     <Compile Include="LibrarianMenu.cs" />
