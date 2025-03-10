@@ -8,23 +8,32 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class Loan
     {
-        private string Id;
-        private User User;
-        private Material Material;
-        private DateTime StartDate;
-        private DateTime DueDate;
-        private DateTime? ReturnDate;
-        private LoanStatus Status;
+        private string id;
+        private Reservation reservation;
+        private User user;
+        private DateTime startDate;
+        private DateTime dueDate;
+        private DateTime? returnDate;
+        public LoanStatus Status;
 
-        public Loan(string id, User user, Material material, DateTime startDate, DateTime dueDate)
+        public string Id { get => id; set => id = value; }
+        internal Reservation Reservation { get => reservation; set => reservation = value; }
+        internal User User { get => user; set => user = value; }
+        public DateTime StartDate { get => startDate; set => startDate = value; }
+        public DateTime DueDate { get => dueDate; set => dueDate = value; }
+        public DateTime? ReturnDate { get => returnDate; set => returnDate = value; }
+
+        public Loan(string id, User user, DateTime startDate, DateTime dueDate, Reservation reservation, DateTime? returnDate, LoanStatus status)
         {
             Id = id;
             User = user;
-            Material = material;
             StartDate = startDate;
             DueDate = dueDate;
             ReturnDate = null;
             Status = LoanStatus.Active;
+            this.Reservation = reservation;
+            ReturnDate = returnDate;
+            Status = status;
         }
     }
 }

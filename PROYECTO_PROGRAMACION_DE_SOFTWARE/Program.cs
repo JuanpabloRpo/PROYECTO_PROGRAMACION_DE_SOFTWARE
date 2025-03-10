@@ -26,7 +26,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         User user = LogIn.NewLogIn();
                         if (user!=null)
                         {
-                            if (user.TypeUser != TypeUser.LIBRARIAN)
+                            if (user.TypeUser == TypeUser.Librarian)
                             {
                                 LibrarianMenu librarianMenu = new LibrarianMenu();
                                 librarianMenu.ShowMenu();
@@ -50,7 +50,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         break;
 
                     case 2:
-                        DataBase.Insert(SignUp.CreateUser());
+                        InsertDataBase.InsertUser(SignUp.CreateUser());
                         break;
                     case 3:
                         flagMenu = false;

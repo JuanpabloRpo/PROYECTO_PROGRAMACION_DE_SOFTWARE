@@ -8,12 +8,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class UserManager
     {
-        private IUserManagement userMethods;
+        private UserMethods userMethods;
 
-        public UserManager(IUserManagement userMethods)
-        {
-            this.userMethods = userMethods;
-        }
+        
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();

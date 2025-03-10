@@ -8,12 +8,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     class LoanManager
     {
-        private ILoanManagement loanMethods;
+        private LoanMethods loanMethods;
 
-        public LoanManager(ILoanManagement loanMethods)
-        {
-            this.loanMethods = loanMethods;
-        }
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();

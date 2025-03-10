@@ -47,6 +47,7 @@
     <Compile Include="AudioVisual.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="DataBase.cs" />
+    <Compile Include="GetDataBase.cs" />
     <Compile Include="ILoanManagement.cs" />
     <Compile Include="IMaterialManagement.cs" />
     <Compile Include="InsertDataBase.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="ReservationManager.cs" />
     <Compile Include="ReservationMethods.cs" />
     <Compile Include="ReservationStatus.cs" />
+    <Compile Include="SearchDataBase.cs" />
     <Compile Include="SignUp.cs" />
     <Compile Include="TypeUser.cs" />
     <Compile Include="User.cs" />

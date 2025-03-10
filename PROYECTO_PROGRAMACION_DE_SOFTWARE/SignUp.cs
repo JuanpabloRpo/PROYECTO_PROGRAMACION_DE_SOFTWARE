@@ -16,7 +16,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine(lineas+"\n");
             Console.WriteLine("Ingrese su ID: ");
             int id = int.Parse(validar.eleccionAValidar(1,Console.ReadLine()));
-            while (DataBase.Search(id))
+            while (SearchDataBase.Search(id))
             {
                 Console.WriteLine("El ID ya se encuentra en la base de datos digite un id diferente");
                 id = int.Parse(validar.eleccionAValidar(1, Console.ReadLine()));
@@ -45,7 +45,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine(lineas + "\n");
             Console.WriteLine("Ingrese su email: ");
             string email = Console.ReadLine();
-            while (DataBase.SearchEmail(email))
+            while (SearchDataBase.SearchEmail(email))
             {
                 Console.WriteLine("El email ya se encuentra en la base de datos digite un email diferente");
                 email = Console.ReadLine();
@@ -55,7 +55,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine(lineas + "\n");
             Console.WriteLine("Ingrese su nombre de usuario: ");
             string userName = validar.eleccionAValidar(3, Console.ReadLine());
-            while (DataBase.Search(userName))
+            while (SearchDataBase.Search(userName))
             {
                 Console.WriteLine("El nombre de usuario ya se encuentra en la base de datos digite un nuevo nombre de usuario diferente");
                 userName = validar.eleccionAValidar(3, Console.ReadLine());

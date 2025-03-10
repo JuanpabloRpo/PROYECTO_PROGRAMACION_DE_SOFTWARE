@@ -8,13 +8,11 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class Book : Material
     {
-        public string Genre { get; set; }
         public int Pages { get; set; }
 
-        public Book(string id, string title, string author, int publicationYear, MaterialStatus status, string genre, int pages)
+        public Book(string id, string title, string author, int publicationYear, MaterialStatus status, int pages)
             : base(id, title, author, publicationYear, status)
         {
-            this.Genre = genre;
             this.Pages = pages;
         }
     }

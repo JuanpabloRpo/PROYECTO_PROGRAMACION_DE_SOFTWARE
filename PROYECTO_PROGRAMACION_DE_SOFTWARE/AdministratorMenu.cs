@@ -35,15 +35,15 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         materialManager.ShowMenu();
                         break;
                     case 2:
-                        LoanManager loanManager = new LoanManager(new LoanMethods());
+                        LoanManager loanManager = new LoanManager();
                         loanManager.ShowMenu();
                         break;
                     case 3:
-                        ReservationManager reservationManager = new ReservationManager(new ReservationMethods());
+                        ReservationManager reservationManager = new ReservationManager();
                         reservationManager.ShowMenu();
                         break;
                     case 4:
-                        UserManager userManager = new UserManager(new UserMethods());
+                        UserManager userManager = new UserManager();
                         userManager.ShowMenu();
                         break;
                     case 5:
