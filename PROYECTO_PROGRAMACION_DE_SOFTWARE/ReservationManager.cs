@@ -8,12 +8,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     class ReservationManager
     {
-        private IReservationManagement reservationMethods;
-
-        public ReservationManager(IReservationManagement reservationMethods)
-        {
-            this.reservationMethods = reservationMethods;
-        }
+        private ReservationMethods reservationMethods;
+        
         public void ShowMenu()
         {
             Validaciones validar = new Validaciones();

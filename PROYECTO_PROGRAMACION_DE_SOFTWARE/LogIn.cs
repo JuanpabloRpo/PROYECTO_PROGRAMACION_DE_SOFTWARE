@@ -17,9 +17,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("Digite su contraseña: ");
             string PassWord = Console.ReadLine();
 
-            if (DataBase.Search(UserName, PassWord))
+            if (SearchDataBase.SearchUser(UserName, PassWord))
             {
-                return DataBase.getUserDataBase(UserName);
+                return GetDataBase.getUserDataBase(UserName);
 
             }
             else

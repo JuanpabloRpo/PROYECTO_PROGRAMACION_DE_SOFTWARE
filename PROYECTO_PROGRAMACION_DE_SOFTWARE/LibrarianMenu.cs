@@ -36,7 +36,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         materialManager.ShowMenu();
                         break;
                     case 2:
-                        LoanManager loanManager = new LoanManager(new LoanMethods());
+                        LoanManager loanManager = new LoanManager();
                         loanManager.ShowMenu();
                         break;
                     case 3:
