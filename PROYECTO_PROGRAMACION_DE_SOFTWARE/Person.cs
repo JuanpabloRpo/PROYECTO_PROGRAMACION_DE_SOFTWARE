@@ -7,6 +7,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
 
         public int Id { get; set; }
+        public int Cedula { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string MiddleName { get; set; }
@@ -16,9 +17,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         {
         }
 
-        public Person(int id, string name, string apellidoPaterno, string apellidoMaterno, int edad)
+        public Person(int id,int cedula, string name, string apellidoPaterno, string apellidoMaterno, int edad)
         {
             Id = id;
+            Cedula = cedula;
             FirstName = name;
             LastName = apellidoPaterno;
             MiddleName = apellidoMaterno;

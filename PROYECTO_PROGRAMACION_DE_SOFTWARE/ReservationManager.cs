@@ -36,7 +36,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         reservationMethods.SearchReservation();
                         break;
                     case 2:
-                        reservationMethods.CreateReservation();
+                        Reservation reservation = new Reservation();
+                        reservationMethods.CreateReservation( reservation);
                         break;
                     case 3:
                         reservationMethods.CancelReservation();

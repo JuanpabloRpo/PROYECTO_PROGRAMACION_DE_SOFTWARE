@@ -26,6 +26,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("Ingrese su nombre: ");
             string name = validar.eleccionAValidar(5, Console.ReadLine());
 
+            Console.WriteLine(lineas + "\n");
+            Console.WriteLine("Ingrese su nombre: ");
+            int cedula = int.Parse(validar.eleccionAValidar(1, Console.ReadLine()));
+
 
             Console.WriteLine(lineas + "\n");
             Console.WriteLine("Ingrese su primer apellido: ");
@@ -66,11 +70,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("Ingrese su password: ");
             string Userpassword = Console.ReadLine();
 
-            User user = new User(id,name,paternalName,mothersName,age,email,userName,Userpassword,0, typeUser);
+            User user = new User(id,cedula,name,paternalName,mothersName,age,email,userName,Userpassword,0, typeUser);
 
             return user;
         }
-
         public static TypeUser SelectUserType()
         {
             Validaciones validar = new Validaciones();

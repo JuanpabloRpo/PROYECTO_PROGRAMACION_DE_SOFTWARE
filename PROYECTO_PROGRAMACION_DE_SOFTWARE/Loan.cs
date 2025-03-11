@@ -8,7 +8,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal class Loan
     {
-        private string id;
+        private int id;
         private Reservation reservation;
         private User user;
         private DateTime startDate;
@@ -16,14 +16,18 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         private DateTime? returnDate;
         public LoanStatus Status;
 
-        public string Id { get => id; set => id = value; }
+        public int Id { get => id; set => id = value; }
         internal Reservation Reservation { get => reservation; set => reservation = value; }
         internal User User { get => user; set => user = value; }
         public DateTime StartDate { get => startDate; set => startDate = value; }
         public DateTime DueDate { get => dueDate; set => dueDate = value; }
         public DateTime? ReturnDate { get => returnDate; set => returnDate = value; }
 
-        public Loan(string id, User user, DateTime startDate, DateTime dueDate, Reservation reservation, DateTime? returnDate, LoanStatus status)
+        public Loan()
+        {
+        }
+
+        public Loan(int id, User user, DateTime startDate, DateTime dueDate, Reservation reservation, DateTime? returnDate, LoanStatus status)
         {
             Id = id;
             User = user;
