@@ -9,7 +9,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     internal enum MaterialCondition
     {
         New,
-        Usado,
+        Used,
         Worn,
         Damaged
     }

@@ -46,7 +46,6 @@
     <Compile Include="AdministratorMenu.cs" />
     <Compile Include="AudioVisual.cs" />
     <Compile Include="Book.cs" />
-    <Compile Include="DataBase.cs" />
     <Compile Include="GetDataBase.cs" />
     <Compile Include="ILoanManagement.cs" />
     <Compile Include="IMaterialManagement.cs" />

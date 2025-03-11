@@ -26,7 +26,14 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         }
         public void ViewAvaraibleMaterials()
         {
+            
             Console.WriteLine("Viendo materiales disponibles...");
+            foreach (Material material in GetDataBase.getMaterialsDataBase())
+            {
+                Console.WriteLine("-----------------------------");
+                material.MostrarInfo();
+                Console.WriteLine("-----------------------------");
+            }
         }
     }
 }

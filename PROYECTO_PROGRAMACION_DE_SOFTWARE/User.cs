@@ -19,7 +19,9 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         {
         }
 
-        public User(int id, string name, string apellidoPaterno, string apellidoMaterno, int edad, string email, string userName, string password, int arrears, TypeUser typeUser) : base(id, name, apellidoPaterno, apellidoMaterno, edad)
+        public User(int id,int cedula, string name, string apellidoPaterno, string apellidoMaterno,
+            int edad, string email, string userName, string password, int arrears, TypeUser typeUser) 
+            : base(id,cedula, name, apellidoPaterno, apellidoMaterno, edad)
 
         {
             this.email = email;

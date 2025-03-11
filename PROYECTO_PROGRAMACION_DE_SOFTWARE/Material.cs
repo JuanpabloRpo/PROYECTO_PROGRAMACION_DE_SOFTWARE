@@ -8,7 +8,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
     internal abstract class Material
     {
-        public string Id { get; set; }
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
         public int YearPublication { get; set; }
@@ -16,7 +16,11 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public MaterialCondition Condition { get; set; }
         public MaterialType Type { get; set; }
 
-        public Material(string id, string title, string author, int yearPublication, MaterialStatus status, MaterialCondition condition , MaterialType type)
+        protected Material()
+        {
+        }
+
+        public Material(int id, string title, string author, int yearPublication, MaterialStatus status, MaterialCondition condition , MaterialType type)
         {
             Id = id;
             Title = title;
@@ -27,7 +31,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             type = new MaterialType();
         }
 
-        protected Material(string id, string title, string author, int yearPublication, MaterialStatus status)
+        public Material(int id, string title, string author, int yearPublication, MaterialStatus status)
         {
             Id = id;
             Title = title;
@@ -35,5 +39,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             YearPublication = yearPublication;
             Status = status;
         }
+
+        public abstract void MostrarInfo();
     }
 }

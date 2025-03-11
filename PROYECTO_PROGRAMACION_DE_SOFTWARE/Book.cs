@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +11,19 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         public int Pages { get; set; }
 
-        public Book(string id, string title, string author, int publicationYear, MaterialStatus status, int pages)
+        public Book()
+        {
+        }
+
+        public Book(int id, string title, string author, int publicationYear, MaterialStatus status, int pages)
             : base(id, title, author, publicationYear, status)
         {
             this.Pages = pages;
+        }
+        public override void MostrarInfo()
+        {
+            Console.WriteLine($"Id: {Id} \nTitle: {Title} \nAutor: {Author} \nAño de publicación: {YearPublication}\n" +
+                $"Disponibilidad: {Status.ToString()} \nCantidad de paginas: {Pages}");
         }
     }
 }

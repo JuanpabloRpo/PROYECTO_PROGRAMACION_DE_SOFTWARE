@@ -12,9 +12,10 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         {
             Console.WriteLine("Buscando reserva...");
         }
-        public void CreateReservation()
+        public void CreateReservation(Reservation reservation)
         {
             Console.WriteLine("Creando reserva...");
+            InsertDataBase.InsertReserve(reservation);
         }
         public void CancelReservation()
         {

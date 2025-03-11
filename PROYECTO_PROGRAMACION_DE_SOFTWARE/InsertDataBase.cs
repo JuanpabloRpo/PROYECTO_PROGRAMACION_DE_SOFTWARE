@@ -11,8 +11,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             connection.Open();
 
             string consulta = $"INSERT INTO NormalUser " +
-                $"(userId, firstName, lastName, middleName, age, arrears, email, userName, userPassword, typeUser) " +
-                $"VALUES ({user.Id}, '{user.FirstName}', '{user.LastName}', '{user.MiddleName}', {user.Age}, '{user.Arrears}', " +
+                $"(userId, cedula,firstName, lastName, middleName, age, arrears, email, userName, userPassword, typeUser) " +
+                $"VALUES ({user.Id},{user.Cedula}, '{user.FirstName}', '{user.LastName}', '{user.MiddleName}', {user.Age}, '{user.Arrears}', " +
                 $"'{user.Email}', '{user.UserName}', '{user.Password}', '{user.TypeUser.ToString()}')";
 
             SqlCommand comando = new SqlCommand(consulta, connection);
@@ -24,7 +24,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public static void InsertLibrarian(User user)
         {
             connection.Open();
-            string consulta = $"INSERT INTO Librarian(librarianId,firstName,lastName,email) VALUES ('{user.FirstName}','{user.LastName}','{user.Email}')";
+            string consulta = $"INSERT INTO Librarian(librarianId,userId,firstName,lastName,email) VALUES ({user.Id},'{user.FirstName}','{user.LastName}','{user.Email}')";
 
             SqlCommand comando = new SqlCommand(consulta, connection);
             comando.ExecuteNonQuery();
@@ -71,7 +71,6 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("\n----- Prestamo creado -----\n");
             connection.Close();
         }
-
 
     }
 }
