@@ -30,9 +30,12 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("Viendo materiales disponibles...");
             foreach (Material material in GetDataBase.getMaterialsDataBase())
             {
-                Console.WriteLine("-----------------------------");
-                material.MostrarInfo();
-                Console.WriteLine("-----------------------------");
+                if (material.Status == MaterialStatus.Available)
+                {
+                    Console.WriteLine("-----------------------------");
+                    material.MostrarInfo();
+                    Console.WriteLine("-----------------------------");
+                }
             }
         }
     }

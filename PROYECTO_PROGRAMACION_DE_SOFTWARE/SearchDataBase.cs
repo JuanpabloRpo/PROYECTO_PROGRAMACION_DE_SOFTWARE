@@ -10,30 +10,45 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public static SqlConnection connection = new SqlConnection("Server=DESKTOP-UTRTB3P; Database = ProgramacionDataBase; Trusted_Connection=True;");
         public static bool SearchUser(string UserName, string password)
         {
-            connection.Open();
-            string consulta = "select userName,Userpassword from NormalUser";
-            SqlCommand comando = new SqlCommand(consulta, connection);
-            SqlDataReader lector = comando.ExecuteReader();
-            while (lector.Read())
+            try
             {
-                if (lector["userName"].ToString().Equals(UserName) && lector["Userpassword"].ToString().Equals(password))
+                connection.Open();
+                string consulta = "select userName,Userpassword from NormalUser";
+                SqlCommand comando = new SqlCommand(consulta, connection);
+                SqlDataReader lector = comando.ExecuteReader();
+                while (lector.Read())
+                {
+                    if (lector["userName"].ToString().Equals(UserName) && lector["Userpassword"].ToString().Equals(password))
+                    {
+                        connection.Close();
+                        return true;
+                    }
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.Message);
+            }
+            finally
+            {
+                if (connection.State == System.Data.ConnectionState.Open)
                 {
                     connection.Close();
-                    return true;
                 }
             }
-            connection.Close();
+            
             return false;
         }
-        public static bool Search(int id)
+        public static bool Search(int cedula)
         {
             connection.Open();
-            string consulta = "select id from NormalUser";
+            string consulta = "select userId from NormalUser";
             SqlCommand comando = new SqlCommand(consulta, connection);
             SqlDataReader lector = comando.ExecuteReader();
             while (lector.Read())
             {
-                if (lector["id"].ToString().Equals(id.ToString()))
+                if (lector["userId"].ToString().Equals(cedula.ToString()))
                 {
                     connection.Close();
                     return true;
@@ -42,7 +57,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             connection.Close();
             return false;
         }
-        public static bool Search(string UserName)
+        public static bool SearchUserName(string UserName)
         {
             connection.Open();
             string consulta = "select userName from NormalUser";

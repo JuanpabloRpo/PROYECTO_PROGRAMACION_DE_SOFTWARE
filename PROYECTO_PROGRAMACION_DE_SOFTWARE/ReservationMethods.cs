@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 {
@@ -11,23 +9,38 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public void SearchReservation()
         {
             Console.WriteLine("Buscando reserva...");
+            List<Reservation> list = GetDataBase.getReservationsDataBase();
+            foreach (Reservation reservation in list) 
+            {
+                if (reservation.Status == ReservationStatus.Pending)
+                {
+                    Console.WriteLine("-----------------------");
+                    reservation.Mostrar();
+                    Console.WriteLine("-----------------------");
+                }
+            }
         }
         public void CreateReservation(Reservation reservation)
         {
             Console.WriteLine("Creando reserva...");
+
             InsertDataBase.InsertReserve(reservation);
+            UpdateDataBase.UpdateMaterialStatusReserved(reservation.Material);
         }
-        public void CancelReservation()
+        public void CancelReservation(Reservation reservation)
         {
             Console.WriteLine("Cancelando reserva...");
         }
-        public void AcceptReservation()
+        public void AcceptReservation(Reservation reservation, User user)
         {
-            Console.WriteLine("Aceptando reserva...");
+            UpdateDataBase.UpdateReserveaAccepted(reservation);
+            InsertDataBase.InsertLoan(new Loan(reservation, user, DateTime.Now, DateTime.Now.AddDays(7)));
+            UpdateDataBase.UpdateMaterialStatusLoaned(reservation.Material);
         }
-        public void RejectReservation()
+        public void RejectReservation(Reservation reservation)
         {
-            Console.WriteLine("Rechazando reserva...");
+            UpdateDataBase.UpdateReserveaRejected(reservation);
+            UpdateDataBase.UpdateMaterialStatusAvailable(reservation.Material);
         }
     }
 }

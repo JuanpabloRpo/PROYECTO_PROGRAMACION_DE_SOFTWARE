@@ -25,11 +25,11 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
         public Loan()
         {
+
         }
 
-        public Loan(int id, User user, DateTime startDate, DateTime dueDate, Reservation reservation, DateTime? returnDate, LoanStatus status)
+        public Loan(Reservation reservation, User user, DateTime startDate, DateTime dueDate)
         {
-            Id = id;
             User = user;
             StartDate = startDate;
             DueDate = dueDate;
@@ -37,7 +37,20 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Status = LoanStatus.Active;
             this.Reservation = reservation;
             ReturnDate = returnDate;
-            Status = status;
+            
+        }
+        public void Mostrar()
+        {
+            Console.WriteLine("\n----- Detalles del Préstamo -----\n");
+            Console.WriteLine($"ID del préstamo: {id}");
+            Console.WriteLine($"ID de la reserva: {reservation.Id}");
+            Console.WriteLine($"Material reservado: {reservation.Material.Title}");
+            Console.WriteLine($"Nombre del usuario: {user.FirstName} {user.LastName}");
+            Console.WriteLine($"Cédula del usuario: {user.Cedula}");
+            Console.WriteLine($"Fecha de inicio: {startDate:yyyy-MM-dd HH:mm:ss}");
+            Console.WriteLine($"Fecha de vencimiento: {dueDate:yyyy-MM-dd HH:mm:ss}");
+            Console.WriteLine($"Fecha de devolución: {(returnDate.HasValue ? returnDate.Value.ToString("yyyy-MM-dd HH:mm:ss") : "No devuelto")}");
+            Console.WriteLine($"Estado del préstamo: {Status}");
         }
     }
 }

@@ -14,14 +14,16 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         private string password;
         private int arrears;
         private TypeUser typeUser;
+        private List<Reservation> reservations;
+        private List<Loan> loans;
 
         public User()
         {
         }
 
-        public User(int id,int cedula, string name, string apellidoPaterno, string apellidoMaterno,
+        public User(int cedula, string name, string apellidoPaterno, string apellidoMaterno,
             int edad, string email, string userName, string password, int arrears, TypeUser typeUser) 
-            : base(id,cedula, name, apellidoPaterno, apellidoMaterno, edad)
+            : base(cedula, name, apellidoPaterno, apellidoMaterno, edad)
 
         {
             this.email = email;
@@ -37,7 +39,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         public string Password { get => password; set => password = value; }
         public int Arrears { get => arrears; set => arrears = value; }
         internal TypeUser TypeUser { get => typeUser; set => typeUser = value; }
-
-
+        internal List<Reservation> Reservations { get => reservations; set => reservations = value; }
+        internal List<Loan> Loans { get => loans; set => loans = value; }
     }
 }
