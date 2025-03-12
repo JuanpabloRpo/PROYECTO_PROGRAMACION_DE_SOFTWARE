@@ -10,8 +10,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
     {
         void SearchReservation();
         void CreateReservation(Reservation reservation);
-        void AcceptReservation();
-        void RejectReservation();
-        void CancelReservation();
+        void AcceptReservation(Reservation reservation, User user);
+        void RejectReservation(Reservation reservation);
+        void CancelReservation(Reservation reservation);
     }
 }

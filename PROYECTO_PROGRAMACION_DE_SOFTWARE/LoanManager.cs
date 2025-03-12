@@ -27,7 +27,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                     "Digite 6 para regresar al menu anterior\n" +
                     "Digite 7 para salir");
 
-                int option = int.Parse(Console.ReadLine());
+                int option = int.Parse(validar.eleccionAValidarSinSobrepasar(1, Console.ReadLine(), 6));
                 Console.Clear();
 
                 switch (option)

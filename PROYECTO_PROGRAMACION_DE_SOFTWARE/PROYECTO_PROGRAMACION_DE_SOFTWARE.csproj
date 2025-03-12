@@ -74,6 +74,7 @@
     <Compile Include="SearchDataBase.cs" />
     <Compile Include="SignUp.cs" />
     <Compile Include="TypeUser.cs" />
+    <Compile Include="UpdateDataBase.cs" />
     <Compile Include="User.cs" />
     <Compile Include="UserMenu.cs" />
     <Compile Include="UserManager.cs" />

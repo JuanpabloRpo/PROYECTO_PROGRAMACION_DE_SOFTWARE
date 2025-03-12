@@ -14,22 +14,17 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine(lineas);
             Console.WriteLine($"-------------------- Registro De {typeUser.ToString()} --------------------");
             Console.WriteLine(lineas+"\n");
-            Console.WriteLine("Ingrese su ID: ");
-            int id = int.Parse(validar.eleccionAValidar(1,Console.ReadLine()));
-            while (SearchDataBase.Search(id))
+            Console.WriteLine("Ingrese su Cedula: ");
+            int cedula = int.Parse(validar.eleccionAValidar(1,Console.ReadLine()));
+            while (SearchDataBase.Search(cedula))
             {
-                Console.WriteLine("El ID ya se encuentra en la base de datos digite un id diferente");
-                id = int.Parse(validar.eleccionAValidar(1, Console.ReadLine()));
+                Console.WriteLine("La cedula ya se encuentra en la base de datos digite una cedula diferente");
+                cedula = int.Parse(validar.eleccionAValidar(1, Console.ReadLine()));
             }
 
             Console.WriteLine(lineas + "\n");
             Console.WriteLine("Ingrese su nombre: ");
             string name = validar.eleccionAValidar(5, Console.ReadLine());
-
-            Console.WriteLine(lineas + "\n");
-            Console.WriteLine("Ingrese su nombre: ");
-            int cedula = int.Parse(validar.eleccionAValidar(1, Console.ReadLine()));
-
 
             Console.WriteLine(lineas + "\n");
             Console.WriteLine("Ingrese su primer apellido: ");
@@ -59,7 +54,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine(lineas + "\n");
             Console.WriteLine("Ingrese su nombre de usuario: ");
             string userName = validar.eleccionAValidar(3, Console.ReadLine());
-            while (SearchDataBase.Search(userName))
+            while (SearchDataBase.SearchUserName(userName))
             {
                 Console.WriteLine("El nombre de usuario ya se encuentra en la base de datos digite un nuevo nombre de usuario diferente");
                 userName = validar.eleccionAValidar(3, Console.ReadLine());
@@ -70,7 +65,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
             Console.WriteLine("Ingrese su password: ");
             string Userpassword = Console.ReadLine();
 
-            User user = new User(id,cedula,name,paternalName,mothersName,age,email,userName,Userpassword,0, typeUser);
+            User user = new User(cedula,name,paternalName,mothersName,age,email,userName,Userpassword,0, typeUser);
 
             return user;
         }

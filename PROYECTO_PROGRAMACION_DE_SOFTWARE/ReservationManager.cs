@@ -12,6 +12,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         
         public void ShowMenu()
         {
+            Reservation reservation = new Reservation();
             Validaciones validar = new Validaciones();
             bool flagMenu = true;
 
@@ -27,7 +28,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                     "Digite 6 para regresar al menu anterior\n" +
                     "Digite 7 para salir");
 
-                int option = int.Parse(Console.ReadLine());
+                int option = int.Parse(validar.eleccionAValidarSinSobrepasar(1,Console.ReadLine(),6));
                 Console.Clear();
 
                 switch (option)
@@ -36,17 +37,17 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                         reservationMethods.SearchReservation();
                         break;
                     case 2:
-                        Reservation reservation = new Reservation();
+                        
                         reservationMethods.CreateReservation( reservation);
                         break;
                     case 3:
-                        reservationMethods.CancelReservation();
+                        reservationMethods.CancelReservation(reservation);
                         break;
                     case 4:
-                        reservationMethods.AcceptReservation();
+                        reservationMethods.AcceptReservation(reservation, new User());
                         break;
                     case 5:
-                        reservationMethods.RejectReservation();
+                        reservationMethods.RejectReservation(reservation);
                         break;
                     case 6:
                         Console.WriteLine("Regresando al menu anterior...");

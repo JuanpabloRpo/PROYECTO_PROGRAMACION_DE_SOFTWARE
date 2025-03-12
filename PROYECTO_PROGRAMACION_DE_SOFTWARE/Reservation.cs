@@ -17,6 +17,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
 
         public Reservation()
         {
+
         }
 
         public Reservation( User user, Material material, DateTime requestDate, DateTime expirationDate, ReservationStatus status)
@@ -34,5 +35,19 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         internal User User { get => _user; set => _user = value; }
         internal Material Material { get => _material; set => _material = value; }
         internal ReservationStatus Status { get => _status; set => _status = value; }
+
+        public void Mostrar()
+        {
+            Console.WriteLine("\n----- Detalles de la Reserva -----\n");
+            Console.WriteLine($"ID de la reserva: {Id}");
+            Console.WriteLine($"ID del usuario: {User.Id}");
+            Console.WriteLine($"Nombre del usuario: {User.FirstName} {User.LastName}");
+            Console.WriteLine($"Cédula del usuario: {User.Cedula}");
+            Console.WriteLine($"ID del material: {Material.Id}");
+            Console.WriteLine($"Título del material: {Material.Title}");
+            Console.WriteLine($"Fecha de inicio de la reserva: {RequestDate:yyyy-MM-dd HH:mm:ss}");
+            Console.WriteLine($"Fecha de expiración de la reserva: {ExpirationDate:yyyy-MM-dd HH:mm:ss}");
+            Console.WriteLine($"Estado de la reserva: {Status}");
+        }
     }
 }

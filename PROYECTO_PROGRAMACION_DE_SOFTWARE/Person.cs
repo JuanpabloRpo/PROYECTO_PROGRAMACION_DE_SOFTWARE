@@ -17,9 +17,8 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
         {
         }
 
-        public Person(int id,int cedula, string name, string apellidoPaterno, string apellidoMaterno, int edad)
+        public Person(int cedula, string name, string apellidoPaterno, string apellidoMaterno, int edad)
         {
-            Id = id;
             Cedula = cedula;
             FirstName = name;
             LastName = apellidoPaterno;

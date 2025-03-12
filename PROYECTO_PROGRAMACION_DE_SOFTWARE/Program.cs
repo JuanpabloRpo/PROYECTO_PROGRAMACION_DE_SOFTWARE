@@ -29,7 +29,7 @@ namespace PROYECTO_PROGRAMACION_DE_SOFTWARE
                             if (user.TypeUser == TypeUser.Librarian)
                             {
                                 LibrarianMenu librarianMenu = new LibrarianMenu();
-                                librarianMenu.ShowMenu();
+                                librarianMenu.ShowMenu(user);
                             }
                             else if (user.TypeUser == TypeUser.Administrator)
                             {
